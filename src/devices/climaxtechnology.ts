@@ -14,15 +14,23 @@ export const definitions: DefinitionWithExtend[] = [
         model: "PSSP5_00.00.03.02TC",
         vendor: "Climaxtechnology",
         description: "Automatically generated definition",
-        extend: [m.deviceEndpoints({"endpoints":{"1":1,"4":4}}), m.onOff({"powerOnBehavior":false})],
-        meta: {"multiEndpoint":true},
-};
+        extend: [
+            m.deviceEndpoints({ endpoints: { "1": 1, "4": 4 }}),
+            m.onOff({ powerOnBehavior: false })
+        ],
+        meta: { multiEndpoint: true },
+    },
     {
         zigbeeModel: ['852L_00.00.03.10TC'],
         model: '852L_00.00.03.10TC',
         vendor: 'ClimaxTechnology',
         description: 'Automatically generated definition',
-        extend: [m.iasZoneAlarm({"zoneType":"generic","zoneAttributes":["alarm_1","alarm_2","tamper","battery_low"]})],
+        extend: [
+            m.iasZoneAlarm({
+                zoneType: "generic",
+                zoneAttributes: ["alarm_1", "alarm_2", "tamper", "battery_low"],
+            }),
+        ],
         meta: {},
-};
+    },
 ];
